@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Hire Me Now | Shalini</title>
+  <style>
+    /* Extra styling for Hire Me page */
+    .hire__hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
+    .hire__hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hire__hero p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .hire__hero .btn {
+      margin: 0.6rem;
+      padding: 0.9rem 1.8rem;
+    }
+
+    /* Why Hire Me */
+    .hire__why {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .hire__why h2 {
+      margin-bottom: 1.5rem;
+    }
+    .hire__why ul {
+      max-width: 700px;
+      margin: 0 auto;
+      list-style: none;
+      padding: 0;
+    }
+    .hire__why ul li {
+      margin: 1rem 0;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .hire__why ul li i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      font-size: 1.3rem;
+    }
+
+    /* Hire Me Form */
+    .hire__form {
+      margin-top: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hire__form form {
+  display: grid;
+  gap: 1.2rem;
+  background: var(--secondary-color); /* service card jaisa background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.hire__form input,
+.hire__form textarea,
+.hire__form select {
+  background: #fff; /* input alag highlight hoga */
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-size: 1rem;
+}
+    .hire__form input:focus,
+    .hire__form textarea:focus,
+    .hire__form select:focus {
+      border-color: var(--primary-color);
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
+    .hire__form button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      background: var(--primary-color);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hire__form button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Quick Contact */
+    .hire__quick {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .hire__quick .btn {
+      margin: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Call to Action */
+    .hire__cta {
+      margin: 4rem auto 3rem;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--primary-color), #6c63ff);
+      color: #fff;
+      border-radius: 10px;
+      max-width: 900px;
+    }
+    .hire__cta h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .hire__cta p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    .hire__cta .btn {
+      background: #fff;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    .hire__cta .btn:hover {
+      background: #f1f1f1;
+    }
+
+/* Fix Hero Buttons */
+.hero__btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.hero__btns .btn {
+  flex: 1 1 auto;
+  min-width: 200px;
+  text-align: center;
+}
+.btn,
+.btn__large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* centre align icon + text */
+  gap: 8px; /* icon aur text ke beech spacing */
+  text-align: center; /* text bhi properly centre ho */
+}
+
+
+/* Why Hire Me */
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+/* Why Hire Me Cards */
+.why__card {
+  background: var(--secondary-color);   /* same as service section */
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.why__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.why__card i {
+  font-size: 2rem;
+  color: var(--primary-color);   /* icon highlight */
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.why__card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #fff;   /* heading white */
+}
+
+.why__card p {
+  color: #f1f1f1;   /* light grey text */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* CTA Button with Logo Center */
+.hire__cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  transition: 0.3s ease;
+}
+.hire__cta .btn:hover {
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar (same as index.html) -->
+  <nav>
+    <div class="nav__bar">
+      <a href="index.html"><span class="logo nav__logo">S</span> Shalini</a>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-3-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#service">Service</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#contact" class="btn">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Hero Section -->
+<section class="section__container hire__hero">
+  <h1>Looking to Hire a Full Stack Python Web Developer?</h1>
+  <p>
+    I specialize in building scalable web applications using Python, Django, MySQL, 
+    JavaScript, HTML, CSS, and Bootstrap. Let’s collaborate to bring your vision to life.
+  </p>
+  <div class="hero__btns">
+    <a href="download.html" class="btn"><i class="ri-download-line"></i> Download Resume</a>
+    <a href="mailto:mishrashalini490@gmail.com" class="btn btn__large"><i class="ri-mail-line"></i> Contact Directly</a>
+  </div>
+</section>
+
+  <!-- Why Hire Me -->
+<section class="section__container hire__why">
+  <h2 class="section__header">Why Hire Me?</h2>
+  <div class="why__grid">
+    <div class="why__card">
+      <i class="ri-code-s-slash-line"></i>
+      <h3>Full-Stack Expertise</h3>
+      <p>Python, Django, MySQL, JavaScript, HTML, CSS, Bootstrap</p>
+    </div>
+    <div class="why__card">
+      <i class="ri-global-line"></i>
+      <h3>Real Projects</h3>
+      <p>Built and deployed portfolio, e-commerce & API projects</p>
+    </div>
+    <div class="why__card">
+      <i class="ri-lightbulb-flash-line"></i>
+      <h3>Problem Solver</h3>
+      <p>Clean, optimized, and scalable code with best practices</p>
+    </div>
+    <div class="why__card">
+      <i class="ri-team-line"></i>
+      <h3>Team Player</h3>
+      <p>Agile ready, adaptable & experienced in collaboration</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Hire Me Form -->
+  <section class="section__container hire__form" id="hire">
+    <h2 class="section__header">Hire Me Form</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="text" name="company" placeholder="Company / Organization" />
+      <input type="email" name="email" placeholder="Work Email" required />
+      <select name="role">
+        <option value="">Select Opportunity</option>
+        <option value="internship">Internship</option>
+        <option value="fulltime">Full-Time</option>
+        <option value="freelance">Freelance / Contract</option>
+      </select>
+      <textarea name="message" rows="5" placeholder="Message / Project Details"></textarea>
+      <input type="file" name="attachment" />
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <!-- Quick Contact -->
+  <section class="section__container hire__quick">
+    <h2 class="section__header">Quick Contact</h2>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+    <a href="https://github.com/yourprofile" target="_blank" class="btn"><i class="ri-github-fill"></i> GitHub</a>
+    <a href="mailto:mishrashalini490@gmail.com" class="btn"><i class="ri-mail-fill"></i> Email</a>
+    <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="btn"><i class="ri-whatsapp-fill"></i> WhatsApp</a>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="hire__cta">
+  <h2>Ready to discuss your next project or role?</h2>
+  <p>Let’s connect and make it happen.</p>
+  <a href="#hire" class="btn btn__large">
+    <i class="ri-user-follow-line"></i> Hire Me Now
+  </a>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    Copyright © 2023 Shalini Portfolio. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+  <script>
+    // Scroll Animations
+    ScrollReveal().reveal(".hire__hero h1", { ...scrollRevealOption });
+    ScrollReveal().reveal(".hire__hero p", { ...scrollRevealOption, delay: 400 });
+    ScrollReveal().reveal(".hire__hero .btn", { ...scrollRevealOption, delay: 600, interval: 200 });
+
+    ScrollReveal().reveal(".hire__why h2", { ...scrollRevealOption });
+    ScrollReveal().reveal(".hire__why ul li", { ...scrollRevealOption, delay: 300, interval: 200 });
+
+    ScrollReveal().reveal(".hire__form h2", { ...scrollRevealOption });
+    ScrollReveal().reveal(".hire__form form", { ...scrollRevealOption, delay: 400 });
+
+    ScrollReveal().reveal(".hire__quick h2", { ...scrollRevealOption });
+    ScrollReveal().reveal(".hire__quick .btn", { ...scrollRevealOption, delay: 400, interval: 200 });
+
+    ScrollReveal().reveal(".hire__cta", { ...scrollRevealOption, delay: 300 });
+  </script>
+</body>
+</html>
