@@ -117,3 +117,4 @@ ScrollReveal().reveal(".portfolio__card", {
   interval: 500,
 
 });
+
