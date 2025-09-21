@@ -280,23 +280,27 @@
 </section>
 
   <!-- Hire Me Form -->
-  <section class="section__container hire__form" id="hire">
-    <h2 class="section__header">Hire Me Form</h2>
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="text" name="company" placeholder="Company / Organization" />
-      <input type="email" name="email" placeholder="Work Email" required />
-      <select name="role">
-        <option value="">Select Opportunity</option>
-        <option value="internship">Internship</option>
-        <option value="fulltime">Full-Time</option>
-        <option value="freelance">Freelance / Contract</option>
-      </select>
-      <textarea name="message" rows="5" placeholder="Message / Project Details"></textarea>
-      <input type="file" name="attachment" />
-      <button type="submit">Submit Request</button>
-    </form>
-  </section>
+<section class="section__container hire__form" id="hire">
+  <h2 class="section__header">Hire Me Form</h2>
+  <form id="contact-form" action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="text" name="company" placeholder="Company / Organization" />
+    <input type="email" name="email" placeholder="Work Email" required />
+    <select name="role">
+      <option value="">Select Opportunity</option>
+      <option value="internship">Internship</option>
+      <option value="fulltime">Full-Time</option>
+      <option value="freelance">Freelance / Contract</option>
+    </select>
+    <textarea name="message" rows="5" placeholder="Message / Project Details"></textarea>
+    <input type="file" name="attachment" />
+    <button type="submit">Submit Request</button>
+
+    <!-- Form Status Message -->
+    <div id="form-status" style="margin-top:10px; font-weight:bold;"></div>
+  </form>
+</section>
+
 
   <!-- Quick Contact -->
   <section class="section__container hire__quick" id="contact2">
@@ -342,5 +346,6 @@
   </script>
 </body>
 </html>
+
 
 
